@@ -16,7 +16,7 @@ How to use the software.
 
 Python3 file encrypt software for Python3 progrmaming language
 
-./python3 .\file_encrypt.py --one for md5
-                            --two for sha256
-                            --three to encrypt a stored string
-                            --four to decrypt stored string
+./python3 .\file_encrypt.py --one -> for md5
+                            --two -> for sha256
+                            --three -> to encrypt a stored string
+                            --four -> to decrypt stored string
