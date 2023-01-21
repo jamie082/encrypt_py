@@ -38,7 +38,7 @@ def main():
         elif o in ("-encrypt", "--three"):  # encrypt string
             encrypt_string()
         elif o in ("-decrypt", "--four"):  # decrypt string
-            output_decrypt(decrypted_string)
+            print_function(decrypted_string)
         else:
             assert False, "unhandled option"
 
@@ -61,12 +61,11 @@ def encrypt_string(): # print string key
     f = Fernet(key)
     token =  f.encrypt(b"This is the string to encrypt")
     print(token)
-    global d
     d = f.decrypt(token)
 
 # This is the decrypted part
 
-def decrypted_string(decrypt): # decrypt string
+def decrypted_string(output): # decrypt string
     return d.decode()
 
 def output_decrypt(func):
@@ -75,10 +74,11 @@ def output_decrypt(func):
     output = func("This is the string to decrypt")
     print(output)
 
-output_decrypt(decrypted_string)
+
+def print_function(): # goes in getopts print_function(decrypted_string)
+    output_decrypt(decrypted_string)
 
 # https://www.geeksforgeeks.org/passing-function-as-an-argument-in-python/
-
 
 if __name__ == "__main__":
     main()
