@@ -36,9 +36,9 @@ def main():
         elif o in ("-sha256", "--two"):
             print(compute_sha256("file_encrypt.py"))
         elif o in ("-encrypt", "--three"):  # encrypt string
-            create_token()
+            encrypt_string()
         elif o in ("-decrypt", "--four"):  # decrypt string
-            decrypted_message()
+            output_decrypt(this is decrypted)
         else:
             assert False, "unhandled option"
 
@@ -59,12 +59,26 @@ def encrypt_string(): # print string key
     
     key = Fernet.generate_key()
     f = Fernet(key)
-    token =  f.encrypt(b"This is the string")
+    token =  f.encrypt(b"This is the string to encrypt")
     print(token)
-
-def decrypted_message(): # decrypt string
+    global d
     d = f.decrypt(token)
-    print(d.decode())
+
+# This is the decrypted part
+
+def decrypted_string(func): # decrypt string
+    return d.decode()
+
+def output_decrypt(func):
+    key = Fernet.generate_key()
+    f = Fernet(key)
+    output = func("This is the string to decrypt")
+    print(output)
+
+# https://www.geeksforgeeks.org/passing-function-as-an-argument-in-python/
+
+def output_decrypt():
+    greet(decrypt)
 
 if __name__ == "__main__":
     main()
