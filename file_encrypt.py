@@ -38,7 +38,7 @@ def main():
         elif o in ("-encrypt", "--three"):  # encrypt string
             encrypt_string()
         elif o in ("-decrypt", "--four"):  # decrypt string
-            output_decrypt(this is decrypted)
+            output_decrypt(decrypted_string)
         else:
             assert False, "unhandled option"
 
@@ -66,7 +66,7 @@ def encrypt_string(): # print string key
 
 # This is the decrypted part
 
-def decrypted_string(func): # decrypt string
+def decrypted_string(decrypt): # decrypt string
     return d.decode()
 
 def output_decrypt(func):
@@ -75,10 +75,10 @@ def output_decrypt(func):
     output = func("This is the string to decrypt")
     print(output)
 
+output_decrypt(decrypted_string)
+
 # https://www.geeksforgeeks.org/passing-function-as-an-argument-in-python/
 
-def output_decrypt():
-    greet(decrypt)
 
 if __name__ == "__main__":
     main()
