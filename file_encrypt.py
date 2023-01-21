@@ -55,26 +55,16 @@ def compute_sha256(file_name):
         readable_hash = hashlib.sha256(bytes).hexdigest()
         print(readable_hash)
 
-def create_token(): # print string key
+def encrypt_string(): # print string key
     
-    key1 = Fernet(Fernet.generate_key())
-    key2 = Fernet(Fernet.generate_key())
-    global f
-    
-    global token
-    token = f.encrypt(b"Secret message!")
-    global pass_var
-    f = MultiFernet([key1, key2])
-    pass_var = f.encrypt(b"Secret message!")
+    key = Fernet.generate_key()
+    f = Fernet(key)
+    token =  f.encrypt(b"This is the string")
     print(token)
 
-def decrypted_message():
-
-    key1 = Fernet(Fernet.generate_key())
-    key2 = Fernet(Fernet.generate_key())
-    f = MultiFernet([key1, key2])
-    pd = f.decrypt(token)
-    print(pd)
+def decrypted_message(): # decrypt string
+    d = f.decrypt(token)
+    print(d.decode())
 
 if __name__ == "__main__":
     main()
