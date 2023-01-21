@@ -63,7 +63,7 @@ def encrypt_string(): # print string key
     print(token)
     d = f.decrypt(token)
 
-def output_decrypt(): #  This is the decrypt part
+def output_decrypt(): #  This is the decrypt part using
     message = "This is the string to decrypt"
     key = Fernet.generate_key()
     fernet = Fernet(key)
@@ -72,9 +72,6 @@ def output_decrypt(): #  This is the decrypt part
 
     print("decrypted string: ", decMessage)
     return decMessage
-
-
-# https://www.geeksforgeeks.org/passing-function-as-an-argument-in-python/
 
 if __name__ == "__main__":
     main()
