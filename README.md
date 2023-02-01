@@ -6,7 +6,7 @@ use getopt -- C-style parser for command line options
 Python3 file encrypt software for Python3 progrmaming language
 
 # How-To use the software
-./python3 .\file_encrypt.py 
+./python3 .\file_encrypt.py <p>
 	flags:<p>
 		--one -> for md5<p>
 		--two -> for sha256<p>
