@@ -9,6 +9,6 @@ Python3 file encrypt software for Python3 progrmaming language
 ./python3 .\file_encrypt.py 
 	flags:
 		--one -> for md5<p>
-		--two -> for sha256<p
+		--two -> for sha256<p>
 		--three -> to encrypt a stored string<p>
 		--four -> to decrypt a stored stiring<p>
