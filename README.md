@@ -1,5 +1,3 @@
-# How-To about the Project
-
 # Modules used
 use getopt -- C-style parser for command line options
 
