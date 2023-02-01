@@ -3,7 +3,7 @@
 # Modules used
 use getopt -- C-style parser for command line options
 
-# How to use the software
+# Info about the Software
 How to use the software.
 
 Python3 file encrypt software for Python3 progrmaming language
